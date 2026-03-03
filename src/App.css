@@ -1,42 +1,174 @@
-#root {
-  max-width: 1280px;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body, #root {
+  background-color: white !important;
+  min-height: 100vh;
+}
+
+body {
+  background-color: white !important;
+  margin: 0;
+  padding: 0;
+}
+
+.resume {
+  max-width: 800px;
   margin: 0 auto;
-  padding: 2rem;
+  padding: 40px;
+  font-family: 'Arial', sans-serif;
+
+  background-color: white;
+}
+
+.header {
   text-align: center;
+  padding-bottom: 10px;
+  margin-bottom: 30px;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.header h1 {
+  font-size: 36px;
+  margin: 0;
+  letter-spacing: 1px;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
+.header h2 {
+  font-size: 20px;
+  margin: 10px 0;
+  color: #555;
+  font-weight: normal;
+}
+
+.contact {
+  margin-top: 15px;
+  color: #666;
+}
+
+.contact span {
+  margin: 0 10px;
+}
+
+.section {
+  margin-bottom: 20px;
+}
+
+.section h3 {
+  font-size: 18px;
+  margin: 0 0 15px 0;
+  padding-bottom: 5px;
+  border-bottom: 2px solid #333;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.section p {
+  margin: 5px 0;
+}
+
+.skills div {
+  margin-bottom: 8px;
+}
+
+.job, .job-1, .project, .education {
+  margin-bottom: 10px;
+}
+
+.job-header, .project-header {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  margin-bottom: 3px;
+}
+
+.job-header h4, .project-header h4 {
+  margin: 0;
+  font-size: 17px;
+}
+
+.job-header span {
+  margin: 0 10px;
+  color: #555;
+}
+
+.dates {
+  margin-left: auto !important;
+  font-style: italic;
+}
+
+ul{
+  padding-left: 20px;
+  margin-top: 5px;
+}
+
+li {
+  margin-bottom: 6px;
+  line-height: 20px;
+}
+
+.links {
+  margin-left: auto;
+}
+
+.project-description {
+  line-height: 1.4;
+}
+
+.links a {
+  margin: 0 5px;
+  color: #0066cc;
+  text-decoration: none;
+}
+
+.links a:hover {
+  text-decoration: underline;
+}
+
+.tech {
+  margin-top: 3px;
+  font-size: 14px;
+  color: #666;
+  font-style: italic;
+  padding-bottom: 3px;
+}
+
+.education h4 {
+  margin: 0;
+  font-size: 17px;
+}
+
+.education div {
+  color: #555;
+}
+
+@media print {
+  .resume {
+    padding: 20px;
   }
-  to {
-    transform: rotate(360deg);
+  
+  .links a {
+    color: #333;
   }
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
+@media (max-width: 600px) {
+  .resume {
+    padding: 20px;
   }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
+  
+  .header h1 {
+    font-size: 28px;
+  }
+  
+  .job-header, .project-header {
+    flex-direction: column;
+  }
+  
+  .dates, .links {
+    margin-left: 0;
+    margin-top: 5px;
+  }
 }
